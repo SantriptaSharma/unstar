@@ -12,7 +12,7 @@ function Unstar()
         return;
     }
 
-    setTimeout(Unstar, 200);
+    setTimeout(Unstar, 100);
 }
 
 
