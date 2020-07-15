@@ -1,0 +1,16 @@
+{
+  "name": "Unstar",
+  "version": "1.0",
+  "description": "Saved you some dignity",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ],
+  "manifest_version": 2
+}
