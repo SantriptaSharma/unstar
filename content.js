@@ -16,4 +16,4 @@ function Unstar()
 }
 
 
-setTimeout(Unstar, 200);
+Unstar();
