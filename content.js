@@ -19,22 +19,59 @@
 
 function UnstarFeed()
 {
-    console.log("feed");
+    // Explore Area
+    let exploreRepos = document.getElementsByClassName("py-2 my-2");
+    for(let i = 0; i < exploreRepos.length; i++)
+    {
+        let starSpan = exploreRepos[i].getElementsByTagName("span")[4];
+        starSpan.innerHTML = starSpan.innerHTML.split("</svg>")[0]+"</svg> 0";
+    }
+
+    // Activity Area
+    if(document.getElementsByClassName("loading-message").length === 0)
+    {
+        let feedLinks = document.getElementsByClassName("muted-link");
+        for(let i = 2; i < feedLinks.length; i++)
+        {
+            let link = feedLinks[i];
+            if(link.getElementsByTagName("svg").length === 1)
+            {
+                link.innerHTML = link.innerHTML.split("</svg>")[0]+"</svg>0"
+            }
+        }
+
+        return;
+    }
+
+    setTimeout(UnstarFeed, 100);
 }
 
 function UnstarSearch()
 {
-    console.log("search");
+    let searchStars = document.getElementsByClassName("muted-link");
+    for(let i = 0; i < searchStars.length; i++)
+    {
+        let stars = searchStars[i];
+        stars.innerHTML = stars.innerHTML.split("</svg>")[0]+"</svg> 0";
+    }
 }
 
 function UnstarProfile()
 {
-    console.log("profile");
+    let stars = document.getElementsByClassName("muted-link");
+    for(let i = 0; i < stars.length; i++)
+    {
+        let star = stars[i];
+        if(star.getElementsByTagName("svg").length === 1)
+        {
+            star.innerHTML = star.innerHTML.split("</svg>")[0] + "</svg> 0"
+        }
+    }
 }
 
 function UnstarRepo()
 {
-    console.log("repo");
+    document.getElementsByClassName("social-count")[2].innerHTML = "0";
 }
 
 let pageFunctions = {
