@@ -4,6 +4,6 @@ Are you tired of seeing how many stars people have on github? Do you just wish t
 
 ### Installation
 - Clone this repo
-- Go to [the chrome extensions settings page thingy](chrome://extensions/)
+- Go to the chrome extensions settings page thingy(chrome://extensions/), and turn on developer mode
 - Click on load unpacked and select the cloned folder
 - done
